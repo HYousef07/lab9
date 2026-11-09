@@ -14,5 +14,5 @@ jobs:
       - name: Run basic tests
         run: |
           bash validate-data.sh "John" "0871234567" | grep -x PASS
-          bash validate-data.sh "ChristopherAlexander" "0871234567" | grep -x FAIL
+          bash validate-data.sh "ChristopherAlexanderX" "0871234567" | grep -x FAIL
           bash validate-data.sh "John" "08712345678" | grep -x FAIL
