@@ -1,0 +1,55 @@
+  505  gh repo create lab9 --public
+  506  ls
+  507  cd lab9
+  508  gh label create EPIC --repo HYousef07/lab9
+  509  gh issue create --repo HYousef07/lab9 --title "do lab9"
+  510  gh repo create lab9 --public
+  511  gh label create EPIC --repo HYousef07/lab9
+  512  gh issue create --repo HYousef07/lab9 --title "do lab9" --label EPIC
+  513  gh issue create --repo HYousef07/lab9 --title "do lab9" --label EPIC --body "Complete Lab 9 tasks"
+  514  gh issue create --repo HYousef07/lab9 --title "create validate-data script" --label enhancement --assignee @me --body "Create a script to validate name"
+  515  mkdir week9
+  516  cd week9
+  517  git clone git@github.com:HYousef07/lab9.git
+  518  cd lab9
+  519  nano validate-data.sh
+  520  bash validate-data.sh
+  521  bash validate-data.sh "Hady Yousef" "X00219585"
+  522  bash validate-data.sh "Hady YYousef" "X00219585"
+  523  bash validate-data.sh "John" "0871234567"
+  524  "ChristopherAlexander" "0871234567"
+  525  bash validate-data.sh "John" "08712345678"
+  526  bash validate-data.sh "ChristopherAlexander" "0871234567"
+  527  gh issue create --repo HYousef07/lab9 --title "create yaml test script" --label enhancement --assignee @me --body "Create a yaml test file"
+  528  ls
+  529  mkdir .github
+  530  cd .github
+  531  mkdir workflows
+  532  cd workflows
+  533  nano basictests.yml
+  534  cd ..
+  535  ls -a
+  536  git add .
+  537  git commit -m "Add github actions"; git push -u origin main
+  538  gh issue list --repo HYousef07/lab9
+  539  gh issue close #1 --repo HYousef07/lab9
+  540  gh issue close #2 --repo HYousef07/lab9
+  541  gh issue close #3 --repo HYousef07/lab9
+  542  gh issue create --repo HYousef07/lab9 --title "create project view" --label enhancement --assignee @me --body "Create a lab9 project with Label, Title and Assignee columns"
+  543  gh issue close #4 --repo HYousef07/lab9
+  544  gh issue create --repo HYousef07/lab9 --title "create test branch" --label enhancement --assignee @me --body "Create a test branch and update the validation script."
+  545  git branch
+  546  git switch -c test
+  547  git branch
+  548  nano validate-data.sh
+  549  git add .; git commit -m "Change max name length to 20"; git push -u origin test
+  550  nano .github/workflows/basictests.yml
+  551  git add .; git commit -m "Run GitHub Actions on main and test"; git push -u origin test
+  552  nano .github/workflows/basictests.yml
+  553  git add .; git commit -m "Fix test for 20 character limit"; git push -u origin test
+  554  git branch
+  555  history > history.txt
+  556  nano history.txt
+  557  history | grep -n "gh repo create lab9"
+  558  nano history.txt
+  559  history | awk '$1 >= 505' > history.txt
